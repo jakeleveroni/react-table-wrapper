@@ -2,7 +2,7 @@ import {TableWrapperConfig} from "../models/table-models/table-wrapper.model";
 import {TableWrapperError} from "../models/error-models/table-wrapper-error";
 import {UtilityService} from "../../services/utlity.service";
 
-export function validateTableWrapperConfig(config: TableWrapperConfig): boolean | TableWrapperError {
+export function validateTableWrapperConfig<T extends object>(config: TableWrapperConfig<T>): boolean | TableWrapperError {
     if (config.multiColumnSortLimit && config.multiColumnSortLimit < 1) {
         return createTableWrapperError('Multi sort column limit has to be a positive number');
     }
@@ -19,7 +19,7 @@ export function validateTableWrapperConfig(config: TableWrapperConfig): boolean 
     return true;
 }
 
-export function validateTableAlterationActionsConfig(config: TableWrapperConfig): boolean | TableWrapperError {
+export function validateTableAlterationActionsConfig<T extends object>(config: TableWrapperConfig<T>): boolean | TableWrapperError {
     if (config.tableAlterationActions.insertionSettings.canInsert
         && !config.tableOptionsConfig?.afterInsertRow) {
         return createTableWrapperError('Cannot enable row insertion without an afterInsertRow callback');
@@ -33,12 +33,12 @@ export function validateTableAlterationActionsConfig(config: TableWrapperConfig)
     return true;
 }
 
-export function validateTableKeyboardNavigationConfig(config: TableWrapperConfig): boolean | TableWrapperError {
+export function validateTableKeyboardNavigationConfig<T extends object>(config: TableWrapperConfig<T>): boolean | TableWrapperError {
     // TODO no validation thus far
     return true;
 }
 
-export function validateTableRowExpansionConfig(config: TableWrapperConfig): boolean | TableWrapperError {
+export function validateTableRowExpansionConfig<T extends object>(config: TableWrapperConfig<T>): boolean | TableWrapperError {
     if (UtilityService.objectXOR(config.rowExpansionConfig.expandableRow, config.rowExpansionConfig.expandableComponent)) {
         return createTableWrapperError('Must define either both or neither of the expandableRow and expandableComponent');
     }
@@ -46,7 +46,7 @@ export function validateTableRowExpansionConfig(config: TableWrapperConfig): boo
     return true;
 }
 
-export function validateTableRowSelectionConfig(config: TableWrapperConfig): boolean | TableWrapperError {
+export function validateTableRowSelectionConfig<T extends object>(config: TableWrapperConfig<T>): boolean | TableWrapperError {
     if (config.rowSelectionConfig?.mode === 'none') {
         return createTableWrapperError('If you want to enable row selection you must set the row selection mode');
     }
@@ -54,7 +54,7 @@ export function validateTableRowSelectionConfig(config: TableWrapperConfig): boo
     return true;
 }
 
-export function validateEntireTable(config: TableWrapperConfig): boolean | TableWrapperError {
+export function validateEntireTable<T extends object>(config: TableWrapperConfig<T>): boolean | TableWrapperError {
     let validationResults = validateTableWrapperConfig(config);
 
     if (!validationResults) return validationResults;

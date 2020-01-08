@@ -2,31 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/table-wrapper/table-wrapper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/error-models/base-error.model.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/error-models/column-definition.error.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/error-models/table-wrapper-error.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-cell-edit-config.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-keyboard-navigation-config.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-manipulation-config.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-options-config.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-row-expansion-config.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-row-selection-config.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-styling-config.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-wrapper-column.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-wrapper.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/validators/table-wrapper-config.validators.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/table-wrapper-column-config.validators.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/table-wrapper.service.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/utlity.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/test-component/test.component.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/validators/table-wrapper-config.validators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/validators/table-wrapper-config.validators.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/table-wrapper.service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/table-wrapper.service.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578449695513</updated>
-      <workItem from="1578449699368" duration="22963000" />
+      <workItem from="1578449699368" duration="23580000" />
     </task>
     <servers />
   </component>

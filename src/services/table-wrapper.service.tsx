@@ -16,15 +16,15 @@ import {TableWrapperError} from "../lib/models/error-models/table-wrapper-error"
 
 export class TableWrapperService {
     public static buildTableWrapperProps<T extends object>(
-        tableConfig: Partial<TableWrapperConfig>,
-        tableOptionsConfig: Partial<Options>,
-        columnColumnConfig: Array<Partial<TableWrapperColumnConfig>>,
+        tableConfig: Partial<TableWrapperConfig<T>>,
+        tableOptionsConfig: Partial<Options<T>>,
+        columnColumnConfig: Array<Partial<TableWrapperColumnConfig<T>>>,
         tableStylingConfig: Partial<TableStylingConfig>,
-        tableCellEditConfig: Partial<CellEdit>,
+        tableCellEditConfig: Partial<CellEdit<T>>,
         tableKeyboardNavigationConfig: Partial<KeyboardNavigation>,
         tableManipulationConfig: Partial<TableManipulationConfig>,
         tableRowExpansionConfig: Partial<RowExpansionConfig>,
-        tableRowSelectionConfig: Partial<SelectRow>,
+        tableRowSelectionConfig: Partial<SelectRow<T>>,
     ): {
         tableConfig: TableWrapperConfig,
         columns: TableWrapperColumnConfig[]
@@ -57,16 +57,16 @@ export class TableWrapperService {
         merge(defaultTable.rowSelectionConfig, tableRowSelectionConfig);
 
         // generate columns and merge into table
-        const columns = this.buildTableColumnsDefinition(columnColumnConfig);
+        const columns = this.buildTableColumnsDefinition<T>(columnColumnConfig);
 
         // validate columns, if error return it
-        const columnValidationResults = validateColumnDefinitions(columns);
+        const columnValidationResults = validateColumnDefinitions<T>(columns);
         if (columnValidationResults instanceof ColumnDefinitionError) {
             return columnValidationResults;
         }
 
         // validate table, if error return it
-        const tableValidationResults = validateEntireTable(defaultTable);
+        const tableValidationResults = validateEntireTable<T>(defaultTable);
         if (tableValidationResults instanceof TableWrapperError) {
             return tableValidationResults;
         }
