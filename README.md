@@ -42,3 +42,12 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Table Resource
+This table is a wrapper around the react-bootstrap-table project. Here are the docs for this project
+they do a good job of explaining all the props that it takes
+
+__BootstrapTable Props Docs__: http://allenfang.github.io/react-bootstrap-table/docs.html#propsOnBootstrapTable 
+
+__TableColumnHeader Props Docs__= http://allenfang.github.io/react-bootstrap-table/docs.html#propsOnTableHeaderColumn

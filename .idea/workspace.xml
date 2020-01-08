@@ -1,13 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="" />
+    <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/table-wrapper/table-wrapper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/error-models/base-error.model.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/error-models/column-definition.error.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/error-models/table-wrapper-error.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-cell-edit-config.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-keyboard-navigation-config.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-manipulation-config.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-options-config.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-row-expansion-config.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-row-selection-config.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-styling-config.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-wrapper-column.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-wrapper.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/validators/table-wrapper-config.validators.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/table-wrapper-column-config.validators.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/table-wrapper.service.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/utlity.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1W5qF1NmKoYnTSWKnW8fBIghk8Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -15,8 +47,37 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\lib\models\shared-models" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\lib\models\table-models" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -40,8 +101,41 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578449695513</updated>
-      <workItem from="1578449699368" duration="309000" />
+      <workItem from="1578449699368" duration="22963000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1332" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578451288406">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1332" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578451288406" />
+    <state x="1648" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578451625055">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1648" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1578451625055" />
+    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578467423582">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578467423582" />
+    <state x="1500" y="201" width="757" height="638" key="find.popup" timestamp="1578467477842">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1500" y="201" width="757" height="638" key="find.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578467477842" />
+    <state x="639" y="146" key="refactoring.ChangeSignatureDialog" timestamp="1578465520966">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="639" y="146" key="refactoring.ChangeSignatureDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578465520966" />
+    <state x="730" y="242" key="run.anything.popup" timestamp="1578471705238">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="730" y="242" key="run.anything.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578471705238" />
+    <state x="1541" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1578453690636">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1541" y="229" width="672" height="678" key="search.everywhere.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578453690636" />
   </component>
 </project>

@@ -1,9 +1,9 @@
-import {ReactElement} from "react";
-import {CustomEditor, Filter, SortOrder} from "react-bootstrap-table";
+import {CSSProperties, ReactElement} from "react";
+import {CustomAttrs, CustomEditor, Filter, SortOrder} from "react-bootstrap-table";
 
 type AlignDirection = 'left' | 'right' | 'center' | 'start' | 'end';
 
-export interface TableWrapperColumnModel<T extends object> {
+export interface TableWrapperColumnConfig<T extends object = any> {
     isKey?: boolean;
     width?: string;
     dataAlign?: AlignDirection;
@@ -12,14 +12,14 @@ export interface TableWrapperColumnModel<T extends object> {
     caretRender?: (direction: 'asc' | 'desc', sortingFieldName: string) => ReactElement;
     dataFormat?: (cell: any, row: any, formatExtraData: any, rowIndex: number) => string | ReactElement
     formatExtraData?: (cell: any, row: any, formatExtraData: any, rowIndex: number) => string | ReactElement;
-    tdAttr?: { [key: string]: string };
-    tdStyle?: { [key: string]: string };
-    thStyle?: { [key: string]: string };
+    tdAttr?: CustomAttrs;
+    tdStyle?: CSSProperties;
+    thStyle?: CSSProperties;
     filterFormatted?: boolean;
     filterValue?: (cell: any, row: any) => any;
     csvHeader?: string;
     csvFormat?: (cell: any, row: any) => string;
-    csvFormatExtraData?: { [key: string]: string };
+    csvFormatExtraData?: CSSProperties;
     hidden?: boolean;
     export?: boolean;
     expandable?: boolean;
@@ -41,7 +41,7 @@ export interface TableWrapperColumnModel<T extends object> {
     colSpan?: number;
 }
 
-export function GetDefaultColumnDefinition<T extends object>(): Partial<TableWrapperColumnModel<T>> {
+export function GetDefaultTableWrapperColumnConfig<T extends object>(): Partial<TableWrapperColumnConfig<T>> {
     return {
         isKey: false,
         width: undefined,

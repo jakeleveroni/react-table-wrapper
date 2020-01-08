@@ -1,25 +1,20 @@
 import {
     GetDefaultTableManipulationConfig,
     TableManipulationConfig
-} from "./table-models/table-manipulation-config.model";
+} from "./table-manipulation-config.model";
 import {
     GetDefaultTableStylingConfig,
     TableStylingConfig
-} from "./table-models/table-styling-config.model";
-import {
-    GetDefaultTableRowExpansionConfig,
-    TableRowExpansionConfig
-} from "./table-models/table-row-expansion-config.model";
-import {
-    GetDefaultTableKeyboardNavigationConfig,
-    TableKeyboardNavigationConfig
-} from "./table-models/table-keyboard-navigation-config.model";
-import {
-    GetDefaultRowSelectionConfig,
-    TableRowSelectionConfig
-} from "./table-models/table-row-selection-config.model";
+} from "./table-styling-config.model";
+import {GetDefaultTableRowExpansionConfig} from "./table-row-expansion-config.model";
+import {GetDefaultTableKeyboardNavigationConfig} from "./table-keyboard-navigation-config.model";
+import {GetDefaultRowSelectionConfig} from "./table-row-selection-config.model";
+import {GetDefaultTableCellEditConfig} from "./table-cell-edit-config.model";
+import {CellEdit, ExpandColumnOptions, KeyboardNavigation, Options, SelectRow} from "react-bootstrap-table";
+import {GetDefaultTableWrapperOptionsConfig} from "./table-options-config.model";
+import {ReactElement} from "react";
 
-export interface TableWrapperModel {
+export interface TableWrapperConfig<TRow extends object = any> {
     height?: string;
     maxHeight?: string;
     striped?: boolean;
@@ -38,14 +33,21 @@ export interface TableWrapperModel {
     ignorePaginationIfOnlyOnePage?: boolean;
     scrollTop?: 'Top' | 'Bottom' | number;
     styling: TableStylingConfig;
-    rowExpansionConfig: TableRowExpansionConfig;
+    rowExpansionConfig: {
+        expandableComponent?: (row: any) => string | ReactElement;
+        expandableRow?: (row: any) => boolean;
+        options: ExpandColumnOptions;
+    };
     multiColumnSortLimit?: number;
-    keyboardNavigationConfig?: TableKeyboardNavigationConfig;
-    rowSelectionConfig?: TableRowSelectionConfig;
+    keyboardNavigationConfig?: boolean | KeyboardNavigation;
+    fetchInfo: any;
+    rowSelectionConfig?: SelectRow;
+    cellEditConfig?: CellEdit;
+    tableOptionsConfig?: Options<TRow>;
 }
 
 // Helper functions for generating defaulted instances of objects defined in this file
-export function GetDefaultTableWrapperModel<T extends object>(): TableWrapperModel {
+export function GetDefaultTableWrapperConfig<T extends object>(): TableWrapperConfig {
     return {
         height: undefined,
         maxHeight: undefined,
@@ -68,8 +70,10 @@ export function GetDefaultTableWrapperModel<T extends object>(): TableWrapperMod
         rowExpansionConfig: GetDefaultTableRowExpansionConfig(),
         multiColumnSortLimit: undefined,
         keyboardNavigationConfig: GetDefaultTableKeyboardNavigationConfig(),
-        rowSelectionConfig: GetDefaultRowSelectionConfig()
-
+        fetchInfo: undefined,
+        rowSelectionConfig: GetDefaultRowSelectionConfig(),
+        cellEditConfig: GetDefaultTableCellEditConfig(),
+        tableOptionsConfig: GetDefaultTableWrapperOptionsConfig()
     }
 }
 
