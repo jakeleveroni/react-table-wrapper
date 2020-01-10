@@ -6,12 +6,8 @@ import {TestComponent} from "./components/test-component/test.component";
 const App: React.FC = () => {
     return (
         <div className="App">
-            <header className="App-header">
-                <p>
-                    Table Wrapper Test Page
-                </p>
-            </header>
-            <div className="table-main-container">
+            <p>Table Demo</p>
+            <div className="table-main-container" style={{marginTop: "100px"}}>
                 <TestComponent/>
             </div>
         </div>
