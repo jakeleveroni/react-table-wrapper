@@ -10,6 +10,10 @@ export class BaseError {
         this.type = type
     }
 
+    public getErrorJsx(): JSX.Element {
+        return (<p>{this.type}: {this.message}</p>);
+    }
+
     public renderError(): void {
         ReactDOM.render(
             <p>{this.type}: {this.message}</p>,

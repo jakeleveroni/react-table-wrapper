@@ -6,13 +6,12 @@ import {
     GetDefaultTableStylingConfig,
     TableStylingConfig
 } from "./table-styling-config.model";
-import {GetDefaultTableRowExpansionConfig} from "./table-row-expansion-config.model";
+import {GetDefaultTableRowExpansionConfig, RowExpansionConfig} from "./table-row-expansion-config.model";
 import {GetDefaultTableKeyboardNavigationConfig} from "./table-keyboard-navigation-config.model";
 import {GetDefaultRowSelectionConfig} from "./table-row-selection-config.model";
 import {GetDefaultTableCellEditConfig} from "./table-cell-edit-config.model";
-import {CellEdit, ExpandColumnOptions, KeyboardNavigation, Options, SelectRow} from "react-bootstrap-table";
+import {CellEdit, KeyboardNavigation, Options, SelectRow} from "react-bootstrap-table";
 import {GetDefaultTableWrapperOptionsConfig} from "./table-options-config.model";
-import {ReactElement} from "react";
 
 export interface TableWrapperConfig<TRow extends object = any> {
     height?: string;
@@ -33,17 +32,13 @@ export interface TableWrapperConfig<TRow extends object = any> {
     ignorePaginationIfOnlyOnePage?: boolean;
     scrollTop?: 'Top' | 'Bottom' | number;
     styling: TableStylingConfig;
-    rowExpansionConfig: {
-        expandableComponent?: (row: any) => string | ReactElement;
-        expandableRow?: (row: any) => boolean;
-        options: ExpandColumnOptions;
-    };
+    rowExpansionConfig: RowExpansionConfig;
     multiColumnSortLimit?: number;
     keyboardNavigationConfig?: boolean | KeyboardNavigation;
     fetchInfo: any;
     rowSelectionConfig?: SelectRow;
     cellEditConfig?: CellEdit;
-    tableOptionsConfig?: Options<TRow>;
+    tableOptionsConfig: Options<TRow>;
 }
 
 // Helper functions for generating defaulted instances of objects defined in this file

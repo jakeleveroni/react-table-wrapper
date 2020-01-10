@@ -11,7 +11,7 @@ const App: React.FC = () => {
                     Table Wrapper Test Page
                 </p>
             </header>
-            <div>
+            <div className="table-main-container">
                 <TestComponent/>
             </div>
         </div>

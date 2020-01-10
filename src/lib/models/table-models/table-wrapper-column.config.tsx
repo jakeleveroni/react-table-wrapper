@@ -1,9 +1,12 @@
 import {CSSProperties, ReactElement} from "react";
 import {CustomAttrs, CustomEditor, Filter, SortOrder} from "react-bootstrap-table";
 
+import merge from 'lodash/merge';
+
 type AlignDirection = 'left' | 'right' | 'center' | 'start' | 'end';
 
 export interface TableWrapperColumnConfig<T extends object = any> {
+    dataField: string,
     isKey?: boolean;
     width?: string;
     dataAlign?: AlignDirection;
@@ -41,8 +44,9 @@ export interface TableWrapperColumnConfig<T extends object = any> {
     colSpan?: number;
 }
 
-export function GetDefaultTableWrapperColumnConfig<T extends object>(): Partial<TableWrapperColumnConfig<T>> {
+export function GetDefaultTableWrapperColumnConfig<T extends object>(key: string): TableWrapperColumnConfig<T> {
     return {
+        dataField: key,
         isKey: false,
         width: undefined,
         dataAlign: 'left',
@@ -78,4 +82,13 @@ export function GetDefaultTableWrapperColumnConfig<T extends object>(): Partial<
         rowSpan: undefined,
         colSpan: undefined,
     }
+}
+
+export function GetColumnsFromKeyArrayAndColumnConfigArray<T extends object>(keys: string[], configs: Partial<TableWrapperColumnConfig<T>>[]) {
+    const columns: TableWrapperColumnConfig<T>[] = [];
+    for (let i = 0; i < keys.length; ++i) {
+        const defaultColumnConfig = GetDefaultTableWrapperColumnConfig(keys[i]);
+        columns.push(merge(defaultColumnConfig, configs[i]));
+    }
+    return columns;
 }

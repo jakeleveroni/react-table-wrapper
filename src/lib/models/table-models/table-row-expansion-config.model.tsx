@@ -7,7 +7,7 @@ export type RowExpansionConfig = {
     options: ExpandColumnOptions;
 };
 
-    export function GetDefaultTableRowExpansionConfig(): RowExpansionConfig {
+export function GetDefaultTableRowExpansionConfig(): RowExpansionConfig {
     return {
         expandableComponent: undefined,
         expandableRow: undefined,

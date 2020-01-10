@@ -1,5 +1,5 @@
-import {TableWrapperColumnConfig} from "../lib/models/table-models/table-wrapper-column.config";
-import {ColumnDefinitionError} from "../lib/models/error-models/column-definition.error";
+import {TableWrapperColumnConfig} from "../models/table-models/table-wrapper-column.config";
+import {ColumnDefinitionError} from "../models/error-models/column-definition.error";
 
 export function validateColumnDefinitions<T extends object>(columns: TableWrapperColumnConfig<T>[]): null | ColumnDefinitionError {
     let errString: string | null = null;
