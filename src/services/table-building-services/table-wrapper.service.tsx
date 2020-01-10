@@ -115,7 +115,7 @@ export class TableWrapperService {
         }
     }
 
-    private static buildTableColumnFromKey<T extends object>(key: string) {
+    private static buildTableColumnFromKey<T extends object>(key: string): TableWrapperColumnConfig<T>  {
         if (!key) {
             throw new Error('No key for column defined');
         } else {
