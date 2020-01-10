@@ -10,7 +10,7 @@ import {GetDefaultTableRowExpansionConfig, RowExpansionConfig} from "./table-row
 import {GetDefaultTableKeyboardNavigationConfig} from "./table-keyboard-navigation-config.model";
 import {GetDefaultRowSelectionConfig} from "./table-row-selection-config.model";
 import {GetDefaultTableCellEditConfig} from "./table-cell-edit-config.model";
-import {CellEdit, KeyboardNavigation, Options, SelectRow} from "react-bootstrap-table";
+import {CellEdit, KeyboardNavigation, Options, SelectRow} from "react-bootstrap-table-next";
 import {GetDefaultTableWrapperOptionsConfig} from "./table-options-config.model";
 
 export interface TableWrapperConfig<TRow extends object = any> {
