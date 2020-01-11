@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="updated formatters">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/formatters/currency.formatter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/formatters/currency.formatter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/formatters/security.formatter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/formatters/security.formatter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/formatters/string.formatter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/formatters/string.formatter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/formatters/time.formatter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/formatters/time.formatter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/models/at-common-tables/at-base-table.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/at-common-tables/at-base-table.model.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/mocks/base-table-data.mock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/mocks/base-table-data.mock.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1W5qF1NmKoYnTSWKnW8fBIghk8Q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\services\table-building-services" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\lib\validators" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\lib\models\shared-models" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\lib\models\table-models" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="" />
+      <created>1578449695513</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578449695513</updated>
+      <workItem from="1578449699368" duration="23645000" />
+      <workItem from="1578634442502" duration="15322000" />
+      <workItem from="1578667940111" duration="3172000" />
+      <workItem from="1578744519783" duration="5034000" />
+      <workItem from="1578753309860" duration="3713000" />
+      <workItem from="1578762966091" duration="664000" />
+    </task>
+    <task id="LOCAL-00001" summary="added test component so that i have a way to test tables in the near future">
+      <created>1578475328933</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578475328933</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first pass implementation of services for table generation">
+      <created>1578649487587</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578649487587</updated>
+    </task>
+    <task id="LOCAL-00003" summary="first pass implementation of services for table generation">
+      <created>1578649520745</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578649520745</updated>
+    </task>
+    <task id="LOCAL-00004" summary="fixed header column width mismatch">
+      <created>1578654668167</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578654668167</updated>
+    </task>
+    <task id="LOCAL-00005" summary="added first pass functionality to inserting buttons into table cells">
+      <created>1578657326230</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578657326230</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixed the implementation of the action button within a table cell">
+      <created>1578660714452</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1578660714452</updated>
+    </task>
+    <task id="LOCAL-00007" summary="moved button rendering into new formatter logic">
+      <created>1578662646950</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1578662646950</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updated logic so that tables are generated from single objects, button cells can be defined in those objects as well and are generated correctly">
+      <created>1578667500077</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1578667500077</updated>
+    </task>
+    <task id="LOCAL-00009" summary="fixed header text formatting">
+      <created>1578667610853</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1578667610853</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added mixins that will be used to rapidly enable table features when  initializing tables">
+      <created>1578671096526</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1578671096527</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added data transformer layer, simplified table builder service">
+      <created>1578748229682</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1578748229682</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added selection action cells">
+      <created>1578749499969</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1578749499969</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added test component so that i have a way to test tables in the near future" />
+    <MESSAGE value="first pass implementation of services for table generation" />
+    <MESSAGE value="fixed header column width mismatch" />
+    <MESSAGE value="added first pass functionality to inserting buttons into table cells" />
+    <MESSAGE value="fixed the implementation of the action button within a table cell" />
+    <MESSAGE value="moved button rendering into new formatter logic" />
+    <MESSAGE value="updated logic so that tables are generated from single objects, button cells can be defined in those objects as well and are generated correctly" />
+    <MESSAGE value="fixed header text formatting" />
+    <MESSAGE value="added mixins that will be used to rapidly enable table features when  initializing tables" />
+    <MESSAGE value="added data transformer layer, simplified table builder service" />
+    <MESSAGE value="added selection action cells" />
+    <MESSAGE value="updated formatters" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated formatters" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1332" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578451288406">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1332" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578451288406" />
+    <state x="1648" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578634546805">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1648" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1578634546805" />
+    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578749534135">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578749534135" />
+    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2" timestamp="1578749543867">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1578749543867" />
+    <state x="1658" y="275" key="FileChooserDialogImpl" timestamp="1578653350712">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1658" y="275" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1578653350712" />
+    <state width="1774" height="258" key="GridCell.Tab.0.bottom" timestamp="1578667661609">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state width="1774" height="258" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1578667661609" />
+    <state width="1774" height="258" key="GridCell.Tab.0.center" timestamp="1578667661608">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state width="1774" height="258" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1578667661608" />
+    <state width="1774" height="258" key="GridCell.Tab.0.left" timestamp="1578667661608">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state width="1774" height="258" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1578667661608" />
+    <state width="1774" height="258" key="GridCell.Tab.0.right" timestamp="1578667661608">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state width="1774" height="258" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1578667661608" />
+    <state x="259" y="249" key="Vcs.Push.Dialog.v2" timestamp="1578749502501">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="259" y="249" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1578749502501" />
+    <state x="1500" y="201" width="757" height="638" key="find.popup" timestamp="1578748530746">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1500" y="201" width="757" height="638" key="find.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578748530746" />
+    <state x="639" y="146" key="refactoring.ChangeSignatureDialog" timestamp="1578465520966">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="639" y="146" key="refactoring.ChangeSignatureDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578465520966" />
+    <state x="730" y="242" key="run.anything.popup" timestamp="1578653184415">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="730" y="242" key="run.anything.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578653184415" />
+    <state x="1541" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1578647562184">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="1541" y="229" width="672" height="678" key="search.everywhere.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578647562184" />
+  </component>
+</project>
