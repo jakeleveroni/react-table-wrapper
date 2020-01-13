@@ -1,5 +1,5 @@
-import {UpperCaseAll} from "../../lib/formatters/string.formatter";
-import {MaskSSN} from "../../lib/formatters/security.formatter";
+import {UpperCaseAll} from "../../formatters/string.formatter";
+import {MaskSSN} from "../../formatters/security.formatter";
 
 export function GetAtBaseTable(data: any[]) {
     return {
