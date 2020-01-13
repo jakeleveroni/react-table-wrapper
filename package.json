@@ -1,18 +1,23 @@
 {
   "name": "jlev-react-table-wrapper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "dependencies": {
     "lodash": "^4.17.15",
     "react-bootstrap-table": "^4.3.1",
     "react-scripts": "3.3.0",
-    "typescript": "~3.7.2"
+    "rollup": "^1.29.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-watch": "^4.3.1",
+    "typings": "^2.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-tsc": "tsc",
+    "rollup": "rollup -c"
   },
   "eslintConfig": {
     "extends": "react-app",
@@ -44,11 +49,23 @@
     "@types/react-bootstrap-table": "^4.3.7",
     "@types/react-dom": "^16.9.0",
     "casual": "^1.6.2",
-    "casual-browserify": "^1.5.19-2"
+    "casual-browserify": "^1.5.19-2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "typescript": "~3.7.2"
   },
   "peerDependencies": {
     "moment": "^2.24.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
-  }
+  },
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "jsnext:main": "build/index.es.js",
+  "files": [
+    "build"
+  ]
 }
