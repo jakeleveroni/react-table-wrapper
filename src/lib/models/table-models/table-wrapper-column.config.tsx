@@ -4,7 +4,7 @@ import {CustomAttrs, CustomEditor, Filter, SortOrder} from "react-bootstrap-tabl
 type AlignDirection = 'left' | 'right' | 'center' | 'start' | 'end';
 
 export interface TableWrapperColumnConfig<T extends object = any> {
-    type?: 'basic' | 'button' | 'dropdown';
+    type?: 'basic' | 'button' | 'dropdown' | 'dropdown-bootstrap';
     dataField: string,
     isKey?: boolean;
     width?: string;
@@ -97,7 +97,7 @@ export function GetTableColumnWithActionButton<T extends object>(key: string,
     col.headerText = text;
     col.formatExtraData = extraData;
     col.dataFormat = (a, b, c, d) => {
-        return <button onClick={() => {
+        return <button className={extraData.className} onClick={() => {
             action(a, b, c, d);
         }}>{text}</button>
     };
@@ -120,6 +120,34 @@ export function GetTableColumnWithDropDown<T extends object>(key: string,
                 return <option key={ndx} value={x}>{x}</option>
             })}
         </select>;
+    };
+
+    return col;
+}
+
+export function GetTableColumnWithBootstrapDropDown<T extends object>(key: string,
+                                                             options: string[],
+                                                             extraData: any,
+                                                             action: (a: any, b: any, c: any, d: any) => string | ReactElement)
+    : TableWrapperColumnConfig<T> {
+    const col = GetDefaultTableWrapperColumnConfig<T>(key);
+    col.formatExtraData = extraData;
+    col.dataFormat = (a, b, c, d) => {
+        return <div className="dropdown">
+            <button className="btn btn-outline-success dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown">
+                Select
+            </button>
+            <div className="dropdown-menu dropdown-menu-right">
+                {options.map((x, ndx) => {
+                    return <button key={ndx} className="dropdown-item" onClick={($event) => {
+                        return action(x, b, c, d);
+                    }}>{x}</button>
+                })}
+            </div>
+        </div>;
     };
 
     return col;

@@ -1,16 +1,20 @@
 import React from "react";
 
 import {TableWrapperService} from "./table-wrapper.service";
-import {BootstrapTable, Options, TableHeaderColumn} from "react-bootstrap-table";
+import {
+    BootstrapTable,
+    Options,
+    TableHeaderColumn
+} from "react-bootstrap-table";
 import {TableWrapperColumnConfig} from "../../lib/models/table-models/table-wrapper-column.config";
 import {BaseError} from "../../lib/models/error-models/base-error.model";
-import {TableOverridesModel} from "../../lib/models/shared-models/table-overrides.model";
+import {TableOverridesModel} from "../../lib/models/table-models/table-overrides.model";
 import {AbstractTableBuilder} from "./abstract-table-builder.service";
-import {BuiltTableConfig} from "../../lib/models/at-common-tables/built-table-config.model";
+import {BuiltTableConfig} from "../../lib/models/table-models/built-table-config.model";
 import {TableWrapperConfig} from "../../lib/models/table-models/table-wrapper.model";
 
 export class AgentToolsTableBuilder<T extends object> extends AbstractTableBuilder<T> {
-    public build(input: any): BaseError | JSX.Element {
+    public buildJSX(input: any): BaseError | JSX.Element {
         const config = this.ingestTableJson(input);
 
         if (config instanceof BaseError) {
@@ -26,20 +30,14 @@ export class AgentToolsTableBuilder<T extends object> extends AbstractTableBuild
 
     protected ingestTableJson(tableConfig: any): BuiltTableConfig<T> | BaseError {
         // transform data if needed
-        tableConfig.data = this.transformData(tableConfig.data);
+        tableConfig.data = this.transformData(tableConfig.data, tableConfig.dataTransformer);
 
-        return this.generateTableWithOverrides(tableConfig.data,
-            tableConfig.mainConfig,
-            tableConfig.columnsConfig,
-            tableConfig.optionsConfig, {
-                tableManipulationConfig: tableConfig.overrides?.manipulationConfig,
-                tableRowSelectionConfig: tableConfig.overrides?.rowSelectionConfig,
-                tableRowExpansionConfig: tableConfig.overrides?.rowExpansionConfig,
-                tableKeyboardNavigationConfig: tableConfig.overrides?.keyboardNavigationConfig,
-                tableCellEditConfig: tableConfig.overrides?.cellEditConfig,
-                tableStylingConfig: tableConfig.overrides?.stylingConfig
-            }
+        const table = this.generateTableWithOverrides(tableConfig.data,
+            tableConfig.mainConfig, tableConfig.columnsConfig,
+            tableConfig.optionsConfig, tableConfig.overrides
         );
+
+        return table;
     }
 
     protected transformData(data: any[], transformer?: (data: any[]) => T[]): T[] {
@@ -53,21 +51,10 @@ export class AgentToolsTableBuilder<T extends object> extends AbstractTableBuild
     protected generateTableWithOverrides(data: T[],
                                       tableConfig: TableWrapperConfig<T>,
                                       columnsDefinition: Array<Partial<TableWrapperColumnConfig<T>>>,
-                                      tableOptionsOverrides: Options<T>,
-                                      tableOverridesModel: TableOverridesModel<T>): BuiltTableConfig<T> | BaseError {
-        return TableWrapperService.buildTableWrapperProps<T>(
-            data,
-            tableConfig,
-            columnsDefinition,
-            tableOptionsOverrides,{
-                tableStylingConfig: tableOverridesModel.tableStylingConfig,
-                tableRowSelectionConfig: tableOverridesModel.tableRowSelectionConfig,
-                tableRowExpansionConfig: tableOverridesModel.tableRowExpansionConfig,
-                tableManipulationConfig: tableOverridesModel.tableManipulationConfig,
-                tableKeyboardNavigationConfig: tableOverridesModel.tableKeyboardNavigationConfig,
-                tableCellEditConfig: tableOverridesModel.tableCellEditConfig,
-            }
-        );
+                                      tableOptions?: Options<T>,
+                                      tableOverridesModel?: TableOverridesModel<T>): BuiltTableConfig<T> | BaseError {
+        return TableWrapperService.buildTableWrapperProps<T>(data, tableConfig, columnsDefinition,
+            tableOptions, tableOverridesModel);
     }
 
     public generateComponentJsx(tableModel: BuiltTableConfig<T>): JSX.Element | BaseError {
@@ -111,7 +98,7 @@ export class AgentToolsTableBuilder<T extends object> extends AbstractTableBuild
                                     tableBodyClass={tableModel.tableConfig.styling.tableBodyClass}
                                     expandableRow={tableModel.tableConfig.rowExpansionConfig.expandableRow}
                                     expandComponent={tableModel.tableConfig.rowExpansionConfig.expandableComponent}
-                                    expandColumnOptions={tableModel.tableConfig.rowExpansionConfig.options}
+                                    expandColumnOptions={tableModel.tableConfig.rowExpansionConfig.expandColumnOptions}
                                     multiColumnSort={tableModel.tableConfig.multiColumnSortLimit}
                                     keyBoardNav={tableModel.tableConfig.keyboardNavigationConfig}
                                     selectRow={tableModel.tableConfig.rowSelectionConfig}
@@ -128,7 +115,6 @@ export class AgentToolsTableBuilder<T extends object> extends AbstractTableBuild
         if (!columnsDefinition) {
             return new BaseError('Cannot generate table columns with null definition');
         } else {
-            // TODO this is where we would user the formatter factory to derive different formatters to add to the column
             return columnsDefinition.map((col, idx) => {
                     return (<TableHeaderColumn key={idx}
                                                isKey={col.isKey}

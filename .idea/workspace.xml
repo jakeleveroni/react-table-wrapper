@@ -2,15 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="updated formatters">
+      <change afterPath="$PROJECT_DIR$/src/examples/basic-table/components/basic-table/basic-table.component.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-pagination-config.model.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/formatters/currency.formatter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/formatters/currency.formatter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/formatters/security.formatter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/formatters/security.formatter.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/formatters/string.formatter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/formatters/string.formatter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/formatters/time.formatter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/formatters/time.formatter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/models/at-common-tables/at-base-table.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/at-common-tables/at-base-table.model.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/mocks/base-table-data.mock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/mocks/base-table-data.mock.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/test-component/test.component.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/formatters/security.formatter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/formatters/security.formatter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/models/at-common-tables/at-base-table.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/table-definitions/at-base-table.model.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/models/at-common-tables/built-table-config.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/table-models/built-table-config.model.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/models/shared-models/table-overrides.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-overrides.model.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/models/table-models/table-manipulation-config.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-manipulation-config.model.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/models/table-models/table-row-expansion-config.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-row-expansion-config.model.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/models/table-models/table-wrapper-column.config.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/table-models/table-wrapper-column.config.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/table-mixins/cell-editing.mixin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/table-mixins/keyboard-navigation.mixin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/table-mixins/pagination.mixin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/table-mixins/row-expansion.mixin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/table-mixins/row-selection.mixin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/table-mixins/style.mixin.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/table-mixins/table-manipulation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/table-building-services/abstract-table-builder.service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/table-building-services/abstract-table-builder.service.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/table-building-services/agent-tools-table-builder.service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/table-building-services/agent-tools-table-builder.service.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/table-building-services/table-wrapper.service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/table-building-services/table-wrapper.service.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,21 +51,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="ts.external.directory.path" value="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="ts.external.directory.path" value="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\src\lib\models\table-models" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\src\examples\table-definitions" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\src\examples\basic-table\components" />
       <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\services\table-building-services" />
       <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\lib\validators" />
-      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src" />
-      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\lib\models\shared-models" />
-      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\lib\models\table-models" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -93,6 +112,11 @@
       <workItem from="1578744519783" duration="5034000" />
       <workItem from="1578753309860" duration="3713000" />
       <workItem from="1578762966091" duration="664000" />
+      <workItem from="1578764036818" duration="44000" />
+      <workItem from="1578764081900" duration="1003000" />
+      <workItem from="1578770332747" duration="34000" />
+      <workItem from="1578770368469" duration="14000" />
+      <workItem from="1578770401891" duration="11127000" />
     </task>
     <task id="LOCAL-00001" summary="added test component so that i have a way to test tables in the near future">
       <created>1578475328933</created>
@@ -183,6 +207,13 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/index.d.js" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added test component so that i have a way to test tables in the near future" />
@@ -204,46 +235,54 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="1332" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578451288406" />
-    <state x="1648" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578634546805">
+    <state x="1648" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578888219050">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1648" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1578634546805" />
-    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578749534135">
+    <state x="1648" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1578888219050" />
+    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578892636737">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578749534135" />
-    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2" timestamp="1578749543867">
+    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578892636737" />
+    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2" timestamp="1578887474746">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1578749543867" />
-    <state x="1658" y="275" key="FileChooserDialogImpl" timestamp="1578653350712">
+    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1578887474746" />
+    <state x="1658" y="275" key="FileChooserDialogImpl" timestamp="1578770364814">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1658" y="275" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1578653350712" />
-    <state width="1774" height="258" key="GridCell.Tab.0.bottom" timestamp="1578667661609">
+    <state x="1658" y="275" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1578770364814" />
+    <state width="1307" height="223" key="GridCell.Tab.0.bottom" timestamp="1578770330837">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state width="1774" height="258" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1578667661609" />
-    <state width="1774" height="258" key="GridCell.Tab.0.center" timestamp="1578667661608">
+    <state width="1307" height="223" key="GridCell.Tab.0.bottom/0.0.3840.1040@0.0.3840.1040" timestamp="1578770330837" />
+    <state width="1307" height="223" key="GridCell.Tab.0.center" timestamp="1578770330837">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state width="1774" height="258" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1578667661608" />
-    <state width="1774" height="258" key="GridCell.Tab.0.left" timestamp="1578667661608">
+    <state width="1307" height="223" key="GridCell.Tab.0.center/0.0.3840.1040@0.0.3840.1040" timestamp="1578770330837" />
+    <state width="1307" height="223" key="GridCell.Tab.0.left" timestamp="1578770330837">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state width="1774" height="258" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1578667661608" />
-    <state width="1774" height="258" key="GridCell.Tab.0.right" timestamp="1578667661608">
+    <state width="1307" height="223" key="GridCell.Tab.0.left/0.0.3840.1040@0.0.3840.1040" timestamp="1578770330837" />
+    <state width="1307" height="223" key="GridCell.Tab.0.right" timestamp="1578770330837">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state width="1774" height="258" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1578667661608" />
+    <state width="1307" height="223" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1578770330837" />
+    <state x="610" y="146" key="RollbackChangesDialog" timestamp="1578887462972">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="610" y="146" key="RollbackChangesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578887462972" />
+    <state x="268" y="166" key="SettingsEditor" timestamp="1578764352460">
+      <screen x="0" y="0" width="3840" height="1040" />
+    </state>
+    <state x="268" y="166" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1578764352460" />
     <state x="259" y="249" key="Vcs.Push.Dialog.v2" timestamp="1578749502501">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="259" y="249" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1578749502501" />
-    <state x="1500" y="201" width="757" height="638" key="find.popup" timestamp="1578748530746">
+    <state x="1500" y="201" width="757" height="638" key="find.popup" timestamp="1578888198084">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1500" y="201" width="757" height="638" key="find.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578748530746" />
+    <state x="1500" y="201" width="757" height="638" key="find.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578888198084" />
     <state x="639" y="146" key="refactoring.ChangeSignatureDialog" timestamp="1578465520966">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -252,9 +291,9 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="730" y="242" key="run.anything.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578653184415" />
-    <state x="1541" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1578647562184">
+    <state x="1541" y="229" width="670" height="58" key="search.everywhere.popup" timestamp="1578884168330">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1541" y="229" width="672" height="678" key="search.everywhere.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578647562184" />
+    <state x="1541" y="229" width="670" height="58" key="search.everywhere.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578884168330" />
   </component>
 </project>

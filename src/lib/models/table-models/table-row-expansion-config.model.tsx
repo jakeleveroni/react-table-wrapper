@@ -4,14 +4,14 @@ import {ReactElement} from "react";
 export type RowExpansionConfig = {
     expandableComponent ? : (row: any) => string | ReactElement;
     expandableRow ? : (row: any) => boolean;
-    options: ExpandColumnOptions;
+    expandColumnOptions: ExpandColumnOptions;
 };
 
 export function GetDefaultTableRowExpansionConfig(): RowExpansionConfig {
     return {
         expandableComponent: undefined,
         expandableRow: undefined,
-        options: {
+        expandColumnOptions: {
             columnWidth: undefined,
             expandColumnVisible: undefined,
             expandColumnBeforeSelectColumn: undefined,

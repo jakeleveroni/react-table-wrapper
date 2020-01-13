@@ -2,11 +2,11 @@
 export interface TableManipulationConfig {
     insertionSettings: {
         canInsert?: boolean;
-        afterInsert?: any;
+        afterInsert?: (rowKeys: any) => void;
     };
     deletionSettings: {
         canDelete?: boolean;
-        afterDelete?: any;
+        afterDelete?: (rowKeys: any) => void;
     };
 }
 

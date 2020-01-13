@@ -1,9 +1,10 @@
-import {generateBasicTableData} from "../../../tests/mocks/base-table-data.mock";
-import {UpperCaseAll} from "../../formatters/string.formatter";
-import {MaskSSN} from "../../formatters/security.formatter";
+import {generateBasicTableData} from "../../tests/mocks/base-table-data.mock";
+import {UpperCaseAll} from "../../lib/formatters/string.formatter";
+import {MaskSSN} from "../../lib/formatters/security.formatter";
 
 export const AtBaseTable = {
-    data: generateBasicTableData(15),
+    data: generateBasicTableData(10),
+    dataTransformer: (data: any[]) => { return data },
     mainConfig: {
         striped: true,
         onHoverHighlight: true,
@@ -21,57 +22,59 @@ export const AtBaseTable = {
     },
     columnsConfig: [{
         type: 'basic',
+        dataSort: true,
         dataField: 'firstName',
-        headerText:'First Name',
+        headerText: 'First Name',
         isKey: true,
     }, {
         type: 'basic',
         dataField: 'lastName',
-        headerText:'Last Name',
+        headerText: 'Last Name',
     }, {
         type: 'basic',
         dataField: 'email',
-        headerText:'Email',
+        headerText: 'Email',
     }, {
         type: 'basic',
         dataField: 'phone',
-        headerText:'Phone #',
+        headerText: 'Phone #',
     }, {
         type: 'basic',
         dataField: 'signupDate',
-        headerText:'Sign-up Date',
+        headerText: 'Sign-up Date',
     }, {
         type: 'basic',
         dataField: 'ssn',
-        headerText:'SSN',
+        headerText: 'SSN',
         dataFormat: (value: any) => {
             return new MaskSSN().format(value);
         }
     }, {
         type: 'basic',
         dataField: 'locale',
-        headerText:'Locale',
+        headerText: 'Locale',
         dataFormat: (value: any) => {
             return new UpperCaseAll().format(value);
         }
     }, {
         type: 'basic',
         dataField: 'isSubscribed',
-        headerText:'Is Subscribed',
+        headerText: 'Is Subscribed',
     }, {
         type: 'button',
         dataField: 'action',
-        headerText:'Action',
+        headerText: 'Action',
         formatExtraData: {
-          test: 'hello'
+            test: 'hello',
+            className: 'btn btn-primary'
         },
         cellAction: (cellValue: any, rowValue: any, extraData: any, ndx: number) => {
             console.log('[button] here', cellValue, rowValue, extraData, ndx);
         }
     }, {
-        type: 'dropdown',
+        type: 'dropdown-bootstrap',
         dataField: 'dropdown',
-        headerText:'Drop Down',
+        headerText: 'Drop Down',
         dropdownSelectionValues: [
             'Yes',
             'No',
@@ -79,7 +82,9 @@ export const AtBaseTable = {
             'No Answer'
         ],
         formatExtraData: {
-            test: 'hello'
+            test: 'hello',
+            selectClassName: 'dropdown-menu',
+            selectItemClassName: 'dropdown-item'
         },
         cellAction: (cellValue: any, row: any, extraData: any, ndx: number) => {
             console.log('[drop-down] here', cellValue, row, extraData, ndx);
@@ -90,8 +95,5 @@ export const AtBaseTable = {
         sortIndicator: true,
         noDataText: 'No data...',
         hidePageListOnlyOnePage: true,
-    },
-    overrides: {
-
     }
 };

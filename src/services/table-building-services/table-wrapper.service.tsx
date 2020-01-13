@@ -1,36 +1,30 @@
 import React from 'react';
 import {
-    GetDefaultTableWrapperColumnConfig, GetTableColumnWithActionButton, GetTableColumnWithDropDown,
+    GetDefaultTableWrapperColumnConfig,
+    GetTableColumnWithActionButton,
+    GetTableColumnWithBootstrapDropDown,
+    GetTableColumnWithDropDown,
     TableWrapperColumnConfig
 } from "../../lib/models/table-models/table-wrapper-column.config";
 import merge from 'lodash/merge';
 import {ColumnDefinitionError} from "../../lib/models/error-models/column-definition.error";
 import {GetDefaultTableWrapperConfig, TableWrapperConfig} from "../../lib/models/table-models/table-wrapper.model";
-import {TableStylingConfig} from "../../lib/models/table-models/table-styling-config.model";
-import {CellEdit, KeyboardNavigation, Options, SelectRow} from "react-bootstrap-table";
-import {TableManipulationConfig} from "../../lib/models/table-models/table-manipulation-config.model";
-import {RowExpansionConfig} from "../../lib/models/table-models/table-row-expansion-config.model";
+import {Options} from "react-bootstrap-table";
 import {BaseError} from "../../lib/models/error-models/base-error.model";
 import {validateColumnDefinitions} from "../../lib/validators/table-wrapper-column-config.validators";
 import {validateEntireTable} from "../../lib/validators/table-wrapper-config.validators";
 import {TableWrapperError} from "../../lib/models/error-models/table-wrapper-error";
-import {BuiltTableConfig} from "../../lib/models/at-common-tables/built-table-config.model";
+import {BuiltTableConfig} from "../../lib/models/table-models/built-table-config.model";
 import {GetDefaultTableWrapperOptionsConfig} from "../../lib/models/table-models/table-options-config.model";
+import {TableOverridesModel} from "../../lib/models/table-models/table-overrides.model";
 
 export class TableWrapperService {
     public static buildTableWrapperProps<T extends object>(
         data: T[],
         tableConfig: Partial<TableWrapperConfig<T>>,
         columnColumnConfig: Partial<TableWrapperColumnConfig<T>>[],
-        tableOptionsConfig: Partial<Options<T>>,
-        tableOverrides: {
-            tableStylingConfig?: Partial<TableStylingConfig>,
-            tableCellEditConfig?: Partial<CellEdit<T>>,
-            tableKeyboardNavigationConfig?: Partial<KeyboardNavigation>,
-            tableManipulationConfig?: Partial<TableManipulationConfig>,
-            tableRowExpansionConfig?: Partial<RowExpansionConfig>,
-            tableRowSelectionConfig?: Partial<SelectRow<T>>
-        }
+        tableOptionsConfig?: Partial<Options<T>>,
+        tableOverrides?: TableOverridesModel<T>
     ): BuiltTableConfig<T> | BaseError {
         // generate default table
         const defaultTable = GetDefaultTableWrapperConfig();
@@ -45,34 +39,36 @@ export class TableWrapperService {
             merge(defaultTable.tableOptionsConfig, GetDefaultTableWrapperOptionsConfig());
         }
 
-        // merge table styles
-        if (tableOverrides.tableStylingConfig) {
-            merge(defaultTable.styling, tableOverrides.tableStylingConfig);
-        }
+        if (tableOverrides) {
+            // merge table styles
+            if (tableOverrides.tableStylingConfig) {
+                merge(defaultTable.styling, tableOverrides.tableStylingConfig);
+            }
 
-        // merge cell editing
-        if (tableOverrides.tableCellEditConfig) {
-            merge(defaultTable.cellEditConfig, tableOverrides.tableCellEditConfig);
-        }
+            // merge cell editing
+            if (tableOverrides.tableCellEditConfig) {
+                merge(defaultTable.cellEditConfig, tableOverrides.tableCellEditConfig);
+            }
 
-        // merge keyboard navigation
-        if (tableOverrides.tableKeyboardNavigationConfig) {
-            merge(defaultTable.keyboardNavigationConfig, tableOverrides.tableKeyboardNavigationConfig);
-        }
+            // merge keyboard navigation
+            if (tableOverrides.tableKeyboardNavigationConfig) {
+                merge(defaultTable.keyboardNavigationConfig, tableOverrides.tableKeyboardNavigationConfig);
+            }
 
-        // merge table actions (insert/delete)
-        if (tableOverrides.tableManipulationConfig) {
-            merge(defaultTable.tableAlterationActions, tableOverrides.tableManipulationConfig);
-        }
+            // merge table actions (insert/delete)
+            if (tableOverrides.tableManipulationConfig) {
+                merge(defaultTable.tableAlterationActions, tableOverrides.tableManipulationConfig);
+            }
 
-        // merge row expansion options
-        if (tableOverrides.tableRowExpansionConfig) {
-            merge(defaultTable.rowExpansionConfig, tableOverrides.tableRowExpansionConfig);
-        }
+            // merge row expansion options
+            if (tableOverrides.tableRowExpansionConfig) {
+                merge(defaultTable.rowExpansionConfig, tableOverrides.tableRowExpansionConfig);
+            }
 
-        // merge row selection config
-        if (tableOverrides.tableRowSelectionConfig) {
-            merge(defaultTable.rowSelectionConfig, tableOverrides.tableRowSelectionConfig);
+            // merge row selection config
+            if (tableOverrides.tableRowSelectionConfig) {
+                merge(defaultTable.rowSelectionConfig, tableOverrides.tableRowSelectionConfig);
+            }
         }
 
         // generate columns and merge into table
@@ -137,9 +133,41 @@ export class TableWrapperService {
                             }
                     );
                     break;
+                case 'dropdown-bootstrap':
+                    col = GetTableColumnWithBootstrapDropDown<T>(columnProperties.dataField,
+                        columnProperties.dropdownSelectionValues || ['None'],
+                        columnProperties.formatExtraData,
+                        columnProperties.cellAction
+                            ? columnProperties.cellAction
+                            : () => {
+                                console.error('No action supplied for button cell');
+                                return <p>ERROR</p>;
+                            }
+                    );
+                    col.tdStyle = {'overflow': 'visible'};
+                    break;
 
             }
+
+            // validate no defaults were configured incorrectly
+            this.checkForColumnDefaults<T>(columnProperties);
+
             return merge(col, columnProperties);
+        }
+    }
+
+    private static checkForColumnDefaults<T extends object>(col: Partial<TableWrapperColumnConfig<T>>) {
+        // If no data sort indicator is defined set a defaults one
+        if (col.dataSort && !col.caretRender) {
+            col.caretRender = ((direction, fieldName) => {
+                if (direction === 'asc') {
+                    return (<span> ▼</span>);
+                }
+                if (direction === 'desc') {
+                    return (<span> ▲</span>);
+                }
+                return (<span> ▼/▲</span>);
+            });
         }
     }
 
