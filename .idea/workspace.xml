@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="">
+    <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="updated readme, cleaned up project, moved test components to examples directory">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/table-wrapper/table-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/table-wrapper/table-wrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/table-building-services/table-wrapper.service.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/table-building-services/table-wrapper.service.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/examples/basic-table/components/basic-table/basic-table.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/basic-table/components/basic-table/basic-table.component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/models/table-definitions/at-base-table.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/table-definitions/at-base-table.model.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/validators/table-wrapper-config.validators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/validators/table-wrapper-config.validators.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/npm-package" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -37,12 +43,16 @@
     <property name="ts.external.directory.path" value="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\src\npm-package" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\npm-package" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\src\lib\models\table-definitions" />
+      <recent name="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper" />
       <recent name="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\src\lib\models\table-models" />
       <recent name="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\src\examples\table-definitions" />
       <recent name="C:\Users\jacob\WebstormProjects\intuit-react-table-wrapper\src\examples\basic-table\components" />
-      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\services\table-building-services" />
-      <recent name="C:\Users\jacob\WebstormProjects\intuit-table-wrapper\src\lib\validators" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -195,6 +205,9 @@
         <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js" />
         <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js" />
         <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/index.d.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js" />
+        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/index.d.js" />
       </list>
     </option>
   </component>
@@ -223,18 +236,18 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="1648" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.1040@0.0.3840.1040" timestamp="1578888219050" />
-    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578892636737">
+    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578901379934">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578892636737" />
-    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2" timestamp="1578894210357">
+    <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578901379934" />
+    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2" timestamp="1578900306724">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1578894210357" />
-    <state x="1658" y="275" key="FileChooserDialogImpl" timestamp="1578770364814">
+    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1578900306724" />
+    <state x="1658" y="275" key="FileChooserDialogImpl" timestamp="1578896541604">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1658" y="275" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1578770364814" />
+    <state x="1658" y="275" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1578896541604" />
     <state width="1307" height="223" key="GridCell.Tab.0.bottom" timestamp="1578770330837">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -251,10 +264,10 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state width="1307" height="223" key="GridCell.Tab.0.right/0.0.3840.1040@0.0.3840.1040" timestamp="1578770330837" />
-    <state x="610" y="146" key="RollbackChangesDialog" timestamp="1578887462972">
+    <state x="610" y="146" key="RollbackChangesDialog" timestamp="1578900301510">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="610" y="146" key="RollbackChangesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578887462972" />
+    <state x="610" y="146" key="RollbackChangesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578900301510" />
     <state x="268" y="166" key="SettingsEditor" timestamp="1578764352460">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -263,10 +276,10 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="259" y="249" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1578894227734" />
-    <state x="1500" y="201" width="757" height="638" key="find.popup" timestamp="1578894259597">
+    <state x="1502" y="202" width="757" height="638" key="find.popup" timestamp="1578903529070">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1500" y="201" width="757" height="638" key="find.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578894259597" />
+    <state x="1502" y="202" width="757" height="638" key="find.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578903529070" />
     <state x="639" y="146" key="refactoring.ChangeSignatureDialog" timestamp="1578465520966">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -275,9 +288,9 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="730" y="242" key="run.anything.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578653184415" />
-    <state x="1541" y="229" width="672" height="160" key="search.everywhere.popup" timestamp="1578894271567">
+    <state x="1541" y="229" width="672" height="160" key="search.everywhere.popup" timestamp="1578898252628">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1541" y="229" width="672" height="160" key="search.everywhere.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578894271567" />
+    <state x="1541" y="229" width="672" height="160" key="search.everywhere.popup/0.0.3840.1040@0.0.3840.1040" timestamp="1578898252628" />
   </component>
 </project>
