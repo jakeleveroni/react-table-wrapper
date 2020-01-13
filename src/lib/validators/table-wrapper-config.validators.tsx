@@ -20,13 +20,11 @@ export function validateTableWrapperConfig<T extends object>(config: TableWrappe
 }
 
 export function validateTableAlterationActionsConfig<T extends object>(config: TableWrapperConfig<T>): boolean | TableWrapperError {
-    if (config.tableAlterationActions.insertionSettings.canInsert
-        && !config.tableOptionsConfig?.afterInsertRow) {
+    if (config.tableAlterationActions.insertionSettings.canInsert && !config.tableOptionsConfig.afterInsertRow) {
         return createTableWrapperError('Cannot enable row insertion without an afterInsertRow callback');
     }
 
-    if (config.tableAlterationActions.deletionSettings.canDelete
-        && !config.tableOptionsConfig?.afterDeleteRow) {
+    if (config.tableAlterationActions.deletionSettings.canDelete && !config.tableOptionsConfig.afterDeleteRow) {
         return createTableWrapperError('Cannot enable row deletion without an afterDeleteRow callback');
     }
 
@@ -47,7 +45,7 @@ export function validateTableRowExpansionConfig<T extends object>(config: TableW
 }
 
 export function validateTableRowSelectionConfig<T extends object>(config: TableWrapperConfig<T>): boolean | TableWrapperError {
-    if (config.rowSelectionConfig?.mode === 'none') {
+    if (config.rowSelectionConfig && config.rowSelectionConfig.mode === 'none') {
         return createTableWrapperError('If you want to enable row selection you must set the row selection mode');
     }
 
