@@ -38,9 +38,7 @@ export class TableWrapperComponent<T extends object> extends React.Component<Tab
         if (this.state.tableJsx instanceof BaseError) {
             return this.state.tableJsx.getErrorJsx();
         } else {
-            return (<div className="react-table-wrapper-container">
-                {this.state.tableJsx}
-            </div>);
+            return this.state.tableJsx;
         }
     }
 }
