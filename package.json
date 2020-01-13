@@ -1,12 +1,10 @@
 {
-  "name": "intuit-table-wrapper",
-  "version": "0.1.0",
-  "private": true,
+  "name": "jlev-react-table-wrapper",
+  "version": "1.0.13",
+  "private": false,
   "dependencies": {
     "lodash": "^4.17.15",
-    "react": "^16.12.0",
     "react-bootstrap-table": "^4.3.1",
-    "react-dom": "^16.12.0",
     "react-scripts": "3.3.0",
     "typescript": "~3.7.2"
   },
@@ -49,6 +47,8 @@
     "casual-browserify": "^1.5.19-2"
   },
   "peerDependencies": {
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   }
 }
