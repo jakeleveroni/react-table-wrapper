@@ -25,9 +25,10 @@ For now also you need to include the following in the `<head>` tag of your apps 
 We are working on getting rid of this but for the time being this is necessary.
 
 ## Development
-Building your code to deploy to NPM
-    yarn rollup
-    npm publish
+Building your code to deploy to NPM: (you will need to update the version in the package.json)
+
+    yarn rollup;
+    npm publish;
 
 ## Building a table
 To build a table using this package you need to make use of the AgentToolsTableBuilderService.tsx

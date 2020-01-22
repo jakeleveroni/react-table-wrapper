@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="updated readme, removed deps from CDN">
+    <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +98,7 @@
       <workItem from="1578770401891" duration="11366000" />
       <workItem from="1579354643251" duration="609000" />
       <workItem from="1579490146061" duration="106000" />
-      <workItem from="1579686245777" duration="295000" />
+      <workItem from="1579686245777" duration="578000" />
     </task>
     <task id="LOCAL-00001" summary="added test component so that i have a way to test tables in the near future">
       <created>1578475328933</created>
@@ -199,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578906894360</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="updated readme with dev instructions and github link">
+      <created>1579686562456</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1579686562456</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,7 +236,8 @@
     <MESSAGE value="updated formatters" />
     <MESSAGE value="updated readme, cleaned up project, moved test components to examples directory" />
     <MESSAGE value="updated readme, removed deps from CDN" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated readme, removed deps from CDN" />
+    <MESSAGE value="updated readme with dev instructions and github link" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated readme with dev instructions and github link" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1332" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578451288406">
@@ -245,10 +252,10 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578901379934" />
-    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2" timestamp="1579686504677">
+    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2" timestamp="1579686559146">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1579686504677" />
+    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1579686559146" />
     <state x="1658" y="275" key="FileChooserDialogImpl" timestamp="1579490241592">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -277,10 +284,10 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="268" y="166" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1578764352460" />
-    <state x="259" y="249" key="Vcs.Push.Dialog.v2" timestamp="1578906939536">
+    <state x="259" y="249" key="Vcs.Push.Dialog.v2" timestamp="1579686565247">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="259" y="249" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1578906939536" />
+    <state x="259" y="249" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1579686565247" />
     <state x="1502" y="202" width="757" height="638" key="find.popup" timestamp="1578903529070">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
