@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="updated readme, cleaned up project, moved test components to examples directory">
+    <list default="true" id="a9197a05-5194-4d03-a418-76bdf8eafc58" name="Default Changelist" comment="updated readme, removed deps from CDN">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/rollup.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/examples/basic-table/components/basic-table/basic-table.component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/examples/basic-table/components/basic-table/basic-table.component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/models/table-definitions/at-base-table.model.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/models/table-definitions/at-base-table.model.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/validators/table-wrapper-config.validators.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/validators/table-wrapper-config.validators.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +27,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/npm-package" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -103,6 +97,9 @@
       <workItem from="1578770332747" duration="34000" />
       <workItem from="1578770368469" duration="14000" />
       <workItem from="1578770401891" duration="11366000" />
+      <workItem from="1579354643251" duration="609000" />
+      <workItem from="1579490146061" duration="106000" />
+      <workItem from="1579686245777" duration="295000" />
     </task>
     <task id="LOCAL-00001" summary="added test component so that i have a way to test tables in the near future">
       <created>1578475328933</created>
@@ -195,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578894212595</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="updated readme, removed deps from CDN">
+      <created>1578906894360</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1578906894360</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +229,8 @@
     <MESSAGE value="added selection action cells" />
     <MESSAGE value="updated formatters" />
     <MESSAGE value="updated readme, cleaned up project, moved test components to examples directory" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated readme, cleaned up project, moved test components to examples directory" />
+    <MESSAGE value="updated readme, removed deps from CDN" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated readme, removed deps from CDN" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1332" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578451288406">
@@ -240,14 +245,14 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="804" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3840.1040@0.0.3840.1040" timestamp="1578901379934" />
-    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2" timestamp="1578900306724">
+    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2" timestamp="1579686504677">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1578900306724" />
-    <state x="1658" y="275" key="FileChooserDialogImpl" timestamp="1578896541604">
+    <state x="291" y="28" width="1130" height="983" key="CommitChangelistDialog2/0.0.3840.1040@0.0.3840.1040" timestamp="1579686504677" />
+    <state x="1658" y="275" key="FileChooserDialogImpl" timestamp="1579490241592">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="1658" y="275" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1578896541604" />
+    <state x="1658" y="275" key="FileChooserDialogImpl/0.0.3840.1040@0.0.3840.1040" timestamp="1579490241592" />
     <state width="1307" height="223" key="GridCell.Tab.0.bottom" timestamp="1578770330837">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
@@ -272,10 +277,10 @@
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
     <state x="268" y="166" key="SettingsEditor/0.0.3840.1040@0.0.3840.1040" timestamp="1578764352460" />
-    <state x="259" y="249" key="Vcs.Push.Dialog.v2" timestamp="1578894227734">
+    <state x="259" y="249" key="Vcs.Push.Dialog.v2" timestamp="1578906939536">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>
-    <state x="259" y="249" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1578894227734" />
+    <state x="259" y="249" key="Vcs.Push.Dialog.v2/0.0.3840.1040@0.0.3840.1040" timestamp="1578906939536" />
     <state x="1502" y="202" width="757" height="638" key="find.popup" timestamp="1578903529070">
       <screen x="0" y="0" width="3840" height="1040" />
     </state>

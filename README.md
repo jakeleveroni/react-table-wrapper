@@ -28,6 +28,11 @@ For now also you need to include the following in the `<head>` tag of your apps 
 
 We are working on getting rid of this but for the time being this is necessary.
 
+## Development
+Building your code to deploy to NPM
+    yarn rollup
+    npm publish
+
 ## Building a table
 To build a table using this package you need to make use of the AgentToolsTableBuilderService.tsx
 and the \<TableWrapperComponent> element. The \<TableWrapperComponent> takes 2 props
@@ -53,6 +58,8 @@ This process can be seen in the `/examples/basic-table/components/basic-table.co
 The `<TableWrapperComponent>` takes an `AbstractTableBuilderService` instance for the builder in case you 
 would like to create your own builder service implementation as the only one we have now is geared towards
 Agent Tools projects specifically.
+
+Additionally there is an example project that you can use [here](https://github.com/jakeleveroni/test-table-project)
 
 ## Model Definitions
 

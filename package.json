@@ -1,7 +1,8 @@
 {
   "name": "jlev-react-table-wrapper",
-  "version": "1.0.51",
+  "version": "1.1.0",
   "private": false,
+  "repository": "https://github.com/jakeleveroni/react-table-wrapper",
   "dependencies": {
     "react-bootstrap-table": "^4.3.1",
     "react-scripts": "3.3.0",
