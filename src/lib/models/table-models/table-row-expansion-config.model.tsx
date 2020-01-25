@@ -20,3 +20,13 @@ export function GetDefaultTableRowExpansionConfig(): RowExpansionConfig {
         }
     }
 }
+
+export function GetDefaultColumnExpansionConfig(): ExpandColumnOptions {
+    return {
+        expandColumnVisible: undefined,
+        expandColumnComponent: undefined,
+        columnWidth: undefined,
+        expandColumnBeforeSelectColumn: undefined,
+        expandedColumnHeaderComponent: undefined,
+    }
+}

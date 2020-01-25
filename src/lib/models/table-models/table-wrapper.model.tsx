@@ -22,7 +22,7 @@ export interface TableWrapperConfig<TRow extends object = any> {
     isBordered?: boolean;
     hasPagination?: boolean;
     trClassName?: string;
-    tableAlterationActions: TableManipulationConfig;
+    tableAlterationActions?: TableManipulationConfig;
     columnSpecificFiltering?: boolean;
     hasSearch?: boolean;
     searchPlaceHolder?: string;
@@ -31,14 +31,14 @@ export interface TableWrapperConfig<TRow extends object = any> {
     csvFileName?: string | (() => string);
     ignorePaginationIfOnlyOnePage?: boolean;
     scrollTop?: 'Top' | 'Bottom' | number;
-    styling: TableStylingConfig;
-    rowExpansionConfig: RowExpansionConfig;
+    styling?: TableStylingConfig;
+    rowExpansionConfig?: RowExpansionConfig;
     multiColumnSortLimit?: number;
     keyboardNavigationConfig?: boolean | KeyboardNavigation;
     fetchInfo: any;
     rowSelectionConfig?: SelectRow;
     cellEditConfig?: CellEdit;
-    tableOptionsConfig: Options<TRow>;
+    tableOptionsConfig?: Options<TRow>;
 }
 
 // Helper functions for generating defaulted instances of objects defined in this file

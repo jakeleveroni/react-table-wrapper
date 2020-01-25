@@ -2,8 +2,8 @@ import React from "react";
 
 import {TableWrapperService} from "./table-wrapper.service";
 import {
-    BootstrapTable,
-    Options,
+    BootstrapTable, CellEdit, KeyboardNavigation,
+    Options, SelectRow,
     TableHeaderColumn
 } from "react-bootstrap-table";
 import {TableWrapperColumnConfig} from "../../lib/models/table-models/table-wrapper-column.config";
@@ -12,10 +12,92 @@ import {TableOverridesModel} from "../../lib/models/table-models/table-overrides
 import {AbstractTableBuilder} from "./abstract-table-builder.service";
 import {BuiltTableConfig} from "../../lib/models/table-models/built-table-config.model";
 import {TableWrapperConfig} from "../../lib/models/table-models/table-wrapper.model";
+import {TableManipulationConfig} from "../../lib/models/table-models/table-manipulation-config.model";
+import {TableStylingConfig} from "../../lib/models/table-models/table-styling-config.model";
+import {RowExpansionConfig} from "../../lib/models/table-models/table-row-expansion-config.model";
 
 export class AgentToolsTableBuilder<T extends object> extends AbstractTableBuilder<T> {
-    public buildJSX(input: any): BaseError | JSX.Element {
-        const config = this.ingestTableJson(input);
+    private table: Partial<BuiltTableConfig<T>> = {};
+
+    public initializeTable(data: T[], tableConfig: TableWrapperConfig<T>, columns: TableWrapperColumnConfig<T>[]) {
+        this.table = {
+            data,
+            tableConfig,
+            columns
+        };
+        return this;
+    }
+
+    public withTableRowActions(tableActions: TableManipulationConfig) {
+        if (this.table.tableConfig) {
+            this.table.tableConfig.tableAlterationActions = tableActions
+        }
+
+        return this;
+    }
+
+    public withTableStylings(tableStyling: TableStylingConfig) {
+        if (this.table.tableConfig) {
+            this.table.tableConfig.styling = tableStyling
+        }
+
+        return this;
+    }
+
+    public withTableRowExpansion(rowExpansionConfig: RowExpansionConfig) {
+        if (this.table.tableConfig) {
+            this.table.tableConfig.rowExpansionConfig = rowExpansionConfig
+        }
+
+        return this;
+    }
+
+    public withKeyboardNavigation(keyboardNavigationConfig: KeyboardNavigation) {
+        if (this.table.tableConfig) {
+            this.table.tableConfig.keyboardNavigationConfig = keyboardNavigationConfig
+        }
+
+        return this;
+    }
+
+    public withRowSelection(rowSelectConfig: SelectRow) {
+        if (this.table.tableConfig) {
+            this.table.tableConfig.rowSelectionConfig = rowSelectConfig
+        }
+
+        return this;
+    }
+
+    public withCellEditing(cellEditingConfig: CellEdit) {
+        if (this.table.tableConfig) {
+            this.table.tableConfig.cellEditConfig = cellEditingConfig
+        }
+
+        return this;
+    }
+
+    public withTableOptions(tableOptionsConfig: Options<T>) {
+        if (this.table.tableConfig) {
+            this.table.tableConfig.tableOptionsConfig = tableOptionsConfig
+        }
+
+        return this;
+    }
+
+    public build() {
+        return this.table;
+    }
+
+
+    public buildJSX(input?: any): BaseError | JSX.Element {
+        let config = null;
+
+        if (input) {
+            config = this.ingestTableJson(input);
+        } else {
+            config = this.ingestTableJson(this.build());
+        }
+
 
         if (config instanceof BaseError) {
             return config;
@@ -76,8 +158,8 @@ export class AgentToolsTableBuilder<T extends object> extends AbstractTableBuild
                                     bordered={tableModel.tableConfig.isBordered}
                                     pagination={tableModel.tableConfig.hasPagination}
                                     trClassName={tableModel.tableConfig.trClassName}
-                                    insertRow={tableModel.tableConfig.tableAlterationActions.insertionSettings.canInsert}
-                                    deleteRow={tableModel.tableConfig.tableAlterationActions.deletionSettings.canDelete}
+                                    insertRow={tableModel.tableConfig.tableAlterationActions?.insertionSettings.canInsert}
+                                    deleteRow={tableModel.tableConfig.tableAlterationActions?.deletionSettings.canDelete}
                                     columnFilter={tableModel.tableConfig.columnSpecificFiltering}
                                     search={tableModel.tableConfig.hasSearch}
                                     searchPlaceholder={tableModel.tableConfig.searchPlaceHolder}
@@ -86,19 +168,19 @@ export class AgentToolsTableBuilder<T extends object> extends AbstractTableBuild
                                     csvFileName={tableModel.tableConfig.csvFileName}
                                     ignoreSinglePage={tableModel.tableConfig.ignorePaginationIfOnlyOnePage}
                                     scrollTop={tableModel.tableConfig.scrollTop}
-                                    containerStyle={tableModel.tableConfig.styling.containerStyleObject}
-                                    tableStyle={tableModel.tableConfig.styling.tableStyleObject}
-                                    headerStyle={tableModel.tableConfig.styling.headerStyleObject}
-                                    bodyStyle={tableModel.tableConfig.styling.bodyStyleObject}
-                                    containerClass={tableModel.tableConfig.styling.containerClass}
-                                    tableContainerClass={tableModel.tableConfig.styling.tableContainerClass}
-                                    headerContainerClass={tableModel.tableConfig.styling.headerContainerClass}
-                                    bodyContainerClass={tableModel.tableConfig.styling.bodyContainerClass}
-                                    tableHeaderClass={tableModel.tableConfig.styling.tableHeaderClass}
-                                    tableBodyClass={tableModel.tableConfig.styling.tableBodyClass}
-                                    expandableRow={tableModel.tableConfig.rowExpansionConfig.expandableRow}
-                                    expandComponent={tableModel.tableConfig.rowExpansionConfig.expandableComponent}
-                                    expandColumnOptions={tableModel.tableConfig.rowExpansionConfig.expandColumnOptions}
+                                    containerStyle={tableModel.tableConfig.styling?.containerStyleObject}
+                                    tableStyle={tableModel.tableConfig.styling?.tableStyleObject}
+                                    headerStyle={tableModel.tableConfig.styling?.headerStyleObject}
+                                    bodyStyle={tableModel.tableConfig.styling?.bodyStyleObject}
+                                    containerClass={tableModel.tableConfig.styling?.containerClass}
+                                    tableContainerClass={tableModel.tableConfig.styling?.tableContainerClass}
+                                    headerContainerClass={tableModel.tableConfig.styling?.headerContainerClass}
+                                    bodyContainerClass={tableModel.tableConfig.styling?.bodyContainerClass}
+                                    tableHeaderClass={tableModel.tableConfig.styling?.tableHeaderClass}
+                                    tableBodyClass={tableModel.tableConfig.styling?.tableBodyClass}
+                                    expandableRow={tableModel.tableConfig.rowExpansionConfig?.expandableRow}
+                                    expandComponent={tableModel.tableConfig.rowExpansionConfig?.expandableComponent}
+                                    expandColumnOptions={tableModel.tableConfig.rowExpansionConfig?.expandColumnOptions}
                                     multiColumnSort={tableModel.tableConfig.multiColumnSortLimit}
                                     keyBoardNav={tableModel.tableConfig.keyboardNavigationConfig}
                                     selectRow={tableModel.tableConfig.rowSelectionConfig}
