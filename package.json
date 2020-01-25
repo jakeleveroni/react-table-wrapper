@@ -71,5 +71,10 @@
   "jsnext:main": "build/index.es.js",
   "files": [
     "build"
-  ]
+  ],
+  "resolutions": {
+    "serialize-javascript": "^2.1.2",
+    "http-proxy-agent": "^2.1.0",
+    "https-proxy-agent": "2.2.0"
+  }
 }

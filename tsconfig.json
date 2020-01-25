@@ -23,7 +23,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noImplicitAny": true,
-    "preserveConstEnums": true
+    "preserveConstEnums": true,
+    "noEmit": true
   },
   "include": [
     "src"
