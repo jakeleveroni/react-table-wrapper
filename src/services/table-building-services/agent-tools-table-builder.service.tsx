@@ -89,15 +89,8 @@ export class AgentToolsTableBuilder<T extends object> extends AbstractTableBuild
     }
 
 
-    public buildJSX(input?: any): BaseError | JSX.Element {
-        let config = null;
-
-        if (input) {
-            config = this.ingestTableJson(input);
-        } else {
-            config = this.ingestTableJson(this.build());
-        }
-
+    public buildJSX(): BaseError | JSX.Element {
+        let config = this.ingestTableJson(this.build());
 
         if (config instanceof BaseError) {
             return config;
@@ -106,8 +99,8 @@ export class AgentToolsTableBuilder<T extends object> extends AbstractTableBuild
         }
     }
 
-    public buildConfig(input: any): BuiltTableConfig<T> | BaseError {
-        return this.ingestTableJson(input);
+    public buildConfig(): BuiltTableConfig<T> | BaseError {
+        return this.ingestTableJson(this.build());
     }
 
     protected ingestTableJson(tableConfig: any): BuiltTableConfig<T> | BaseError {
